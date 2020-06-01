@@ -14,7 +14,7 @@ namespace DT.Samples.Agora.Cross.Droid
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
             Xamarin.Agora.Full.Forms.AgoraServiceDroid.Init();
-            Plugin.CurrentActivity.CrossCurrentActivity.Current.Init(this, savedInstanceState);
+            Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             base.OnCreate(savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());

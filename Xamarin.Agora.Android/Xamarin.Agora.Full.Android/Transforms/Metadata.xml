@@ -8,15 +8,14 @@
   <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
   -->
     <attr path="/api/package[@name='io.agora.rtc']" name="managedName">DT.Xamarin.Agora</attr>
-    <attr path="/api/package[@name='io.agora.live']" name="managedName">DT.Xamarin.Agora.Live</attr>
-    <attr path="/api/package[@name='io.agora.live.impl']" name="managedName">DT.Xamarin.Agora.Live.Impl</attr>
     <attr path="/api/package[@name='io.agora.rtc.gl']" name="managedName">DT.Xamarin.Agora.GL</attr>
     <attr path="/api/package[@name='io.agora.rtc.mediaio']" name="managedName">DT.Xamarin.Agora.MediaIO</attr>
     <attr path="/api/package[@name='io.agora.rtc.utils']" name="managedName">DT.Xamarin.Agora.Utils</attr>
     <attr path="/api/package[@name='io.agora.rtc.video']" name="managedName">DT.Xamarin.Agora.Video</attr>
     <attr path="/api/package[@name='io.agora.rtc.audio']" name="managedName">DT.Xamarin.Agora.Audio</attr>
     <attr path="/api/package[@name='io.agora.rtc.live']" name="managedName">DT.Xamarin.Agora.Live</attr>
-    <attr path="/api/package[@name='io.agora.rtc.xm']" name="managedName">DT.Xamarin.Agora.XM</attr>
+    <attr path="/api/package[@name='io.agora.rtc.gl']" name="managedName">DT.Xamarin.Agora.GL</attr>
+    <attr path="/api/package[@name='io.agora.rtc.internal']" name="managedName">DT.Xamarin.Agora.Internal</attr>
     <remove-node path="/api/package[@name='io.agora.rtc.internal']/class" />
     <attr path="/api/package[@name='io.agora.rtc.gl']/class[@name='EglBase14']/method[@name='getEglBaseContext' and count(parameter)=0]" name="return">DT.Xamarin.Agora.GL.EglBase.IContext</attr>
 </metadata>

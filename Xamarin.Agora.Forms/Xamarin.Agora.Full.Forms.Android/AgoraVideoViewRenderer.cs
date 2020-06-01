@@ -72,7 +72,7 @@ namespace Xamarin.Agora.Full.Forms
                             _videoService.SetupView(UpdatedHolder());
                         }
                     }
-                    catch(Exception ex)
+                    catch(Exception)
                     {
                         _holder.NativeView?.RemoveAllViews();
                     }

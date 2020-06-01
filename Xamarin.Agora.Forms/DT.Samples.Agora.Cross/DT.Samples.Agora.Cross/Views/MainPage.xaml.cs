@@ -9,7 +9,7 @@ using NavigationPage = Xamarin.Forms.NavigationPage;
 namespace DT.Samples.Agora.Cross.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MainPage : MasterDetailPage
+    public partial class MainPage : Xamarin.Forms.MasterDetailPage
     {
         private Dictionary<int, NavigationPage> _menuPages = new Dictionary<int, NavigationPage>();
         public MainPage()

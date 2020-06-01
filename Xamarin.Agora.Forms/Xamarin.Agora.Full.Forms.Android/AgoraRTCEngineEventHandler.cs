@@ -38,6 +38,7 @@ namespace Xamarin.Agora.Full.Forms
         {
             _agoraService.OnJoinChannelSuccess(p0, p1, p2);
         }
+
         /// <summary>
         /// Ons the first remote video decoded.
         /// </summary>
@@ -45,10 +46,24 @@ namespace Xamarin.Agora.Full.Forms
         /// <param name="p1">Width.</param>
         /// <param name="p2">Height.</param>
         /// <param name="p3">Elapsed.</param>
+        [Obsolete]
         public override void OnFirstRemoteVideoDecoded(int p0, int p1, int p2, int p3)
         {
             _agoraService.OnFirstRemoteVideoDecoded(p0, p1, p2, p3);
         }
+
+        /// <summary>
+        /// Occurs when the remote video state changes.
+        /// </summary>
+        /// <param name="p0">Uid</param>
+        /// <param name="p1">State</param>
+        /// <param name="p2">Reason</param>
+        /// <param name="p3">Elapsed</param>
+        public override void OnRemoteVideoStateChanged(int p0, int p1, int p2, int p3)
+        {
+            _agoraService.OnRemoteVideoStateChanged(p0, p1, p2, p3);
+        }
+
         /// <summary>
         /// Ons the user offline.
         /// </summary>
@@ -58,18 +73,22 @@ namespace Xamarin.Agora.Full.Forms
         {
             _agoraService.OnUserOffline(p0, p1);
         }
+
         /// <summary>
         /// Ons the user mute video.
         /// </summary>
-        /// <param name="p0">P0.</param>
+        /// <param name="p0">Uid.</param>
         /// <param name="p1">If set to <c>true</c> p1.</param>
+        [Obsolete]
         public override void OnUserMuteVideo(int p0, bool p1)
         {
             _agoraService.OnUserMuteVideo(p0, p1);
         }
+
         /// <summary>
         /// Ons the connection interrupted.
         /// </summary>
+        [Obsolete]
         public override void OnConnectionInterrupted()
         {
             _agoraService.OnConnectionInterrupted();
@@ -131,9 +150,11 @@ namespace Xamarin.Agora.Full.Forms
         {
             _agoraService.OnRtcStats(p0);
         }
+
         /// <summary>
         /// Ons the video stopped.
         /// </summary>
+        [Obsolete]
         public override void OnVideoStopped()
         {
             _agoraService.OnVideoStopped();
@@ -164,20 +185,24 @@ namespace Xamarin.Agora.Full.Forms
         {
             _agoraService.OnAudioEffectFinished(p0);
         }
+
         /// <summary>
         /// Ons the audio mixing finished.
         /// </summary>
+        [Obsolete]
         public override void OnAudioMixingFinished()
         {
             _agoraService.OnAudioMixingFinished();
         }
+
         /// <summary>
         /// Ons the audio quality.
         /// </summary>
-        /// <param name="p0">P0.</param>
-        /// <param name="p1">P1.</param>
-        /// <param name="p2">P2.</param>
-        /// <param name="p3">P3.</param>
+        /// <param name="p0">Uid.</param>
+        /// <param name="p1">Quality.</param>
+        /// <param name="p2">Delay.</param>
+        /// <param name="p3">Lost.</param>
+        [Obsolete]
         public override void OnAudioQuality(int p0, int p1, short p2, short p3)
         {
             _agoraService.OnAudioQuality(p0, p1, p2, p3);
@@ -207,9 +232,11 @@ namespace Xamarin.Agora.Full.Forms
         {
             _agoraService.OnCameraFocusAreaChanged(p0);
         }
+
         /// <summary>
         /// Ons the camera ready.
         /// </summary>
+        [Obsolete]
         public override void OnCameraReady()
         {
             _agoraService.OnCameraReady();
@@ -223,9 +250,11 @@ namespace Xamarin.Agora.Full.Forms
         {
             _agoraService.OnClientRoleChanged(p0, p1);
         }
+
         /// <summary>
         /// Ons the connection banned.
         /// </summary>
+        [Obsolete]
         public override void OnConnectionBanned()
         {
             _agoraService.OnConnectionBanned();
@@ -248,11 +277,13 @@ namespace Xamarin.Agora.Full.Forms
         {
             _agoraService.OnFirstLocalVideoFrame(p0, p1, p2);
         }
+
         /// <summary>
         /// Ons the first remote audio frame.
         /// </summary>
         /// <param name="p0">P0.</param>
         /// <param name="p1">P1.</param>
+        [Obsolete]
         public override void OnFirstRemoteAudioFrame(int p0, int p1)
         {
             _agoraService.OnFirstRemoteAudioFrame(p0, p1);
@@ -298,10 +329,12 @@ namespace Xamarin.Agora.Full.Forms
         {
             _agoraService.OnMediaEngineStartCallSuccess();
         }
+
         /// <summary>
         /// Ons the microphone enabled.
         /// </summary>
         /// <param name="p0">If set to <c>true</c> p0.</param>
+        [Obsolete]
         public override void OnMicrophoneEnabled(bool p0)
         {
             _agoraService.OnMicrophoneEnabled(p0);
@@ -316,6 +349,7 @@ namespace Xamarin.Agora.Full.Forms
         {
             _agoraService.OnNetworkQuality(p0, p1, p2);
         }
+
         /// <summary>
         /// Ons the remote audio transport stats.
         /// </summary>
@@ -323,6 +357,7 @@ namespace Xamarin.Agora.Full.Forms
         /// <param name="p1">P1.</param>
         /// <param name="p2">P2.</param>
         /// <param name="p3">P3.</param>
+        [Obsolete]
         public override void OnRemoteAudioTransportStats(int p0, int p1, int p2, int p3)
         {
             _agoraService.OnRemoteAudioTransportStats(p0, p1, p2, p3);
@@ -341,7 +376,7 @@ namespace Xamarin.Agora.Full.Forms
         /// </summary>
         /// <param name="p0">P0.</param>
         /// <param name="p1">P1.</param>
-        public override void OnRemoteVideoStateChanged(int p0, int p1)
+        public void OnRemoteVideoStateChanged(int p0, int p1)
         {
             _agoraService.OnRemoteVideoStateChanged(p0, p1);
         }
@@ -353,6 +388,7 @@ namespace Xamarin.Agora.Full.Forms
         {
             _agoraService.OnRemoteVideoStats(p0);
         }
+
         /// <summary>
         /// Ons the remote video transport stats.
         /// </summary>
@@ -360,6 +396,7 @@ namespace Xamarin.Agora.Full.Forms
         /// <param name="p1">P1.</param>
         /// <param name="p2">P2.</param>
         /// <param name="p3">P3.</param>
+        [Obsolete]
         public override void OnRemoteVideoTransportStats(int p0, int p1, int p2, int p3)
         {
             _agoraService.OnRemoteVideoTransportStats(p0, p1, p2, p3);
@@ -403,19 +440,23 @@ namespace Xamarin.Agora.Full.Forms
         {
             _agoraService.OnStreamMessageError(p0, p1, p2, p3, p4);
         }
+
         /// <summary>
         /// Ons the stream published.
         /// </summary>
         /// <param name="p0">P0.</param>
         /// <param name="p1">P1.</param>
+        [Obsolete]
         public override void OnStreamPublished(string p0, int p1)
         {
             _agoraService.OnStreamPublished(p0, p1);
         }
+
         /// <summary>
         /// Ons the stream unpublished.
         /// </summary>
         /// <param name="p0">P0.</param>
+        [Obsolete]
         public override void OnStreamUnpublished(string p0)
         {
             _agoraService.OnStreamUnpublished(p0);
@@ -435,20 +476,24 @@ namespace Xamarin.Agora.Full.Forms
         {
             _agoraService.OnTranscodingUpdated();
         }
+
         /// <summary>
         /// Ons the user enable local video.
         /// </summary>
         /// <param name="p0">P0.</param>
         /// <param name="p1">If set to <c>true</c> p1.</param>
+        [Obsolete]
         public override void OnUserEnableLocalVideo(int p0, bool p1)
         {
             _agoraService.OnUserEnableLocalVideo(p0, p1);
         }
+
         /// <summary>
         /// Ons the user enable video.
         /// </summary>
         /// <param name="p0">P0.</param>
         /// <param name="p1">If set to <c>true</c> p1.</param>
+        [Obsolete]
         public override void OnUserEnableVideo(int p0, bool p1)
         {
             _agoraService.OnUserEnableVideo(p0, p1);
@@ -462,15 +507,23 @@ namespace Xamarin.Agora.Full.Forms
         {
             _agoraService.OnUserJoined(p0, p1);
         }
+
         /// <summary>
         /// Ons the user mute audio.
         /// </summary>
         /// <param name="p0">P0.</param>
         /// <param name="p1">If set to <c>true</c> p1.</param>
+        [Obsolete]
         public override void OnUserMuteAudio(int p0, bool p1)
         {
             _agoraService.OnUserMuteAudio(p0, p1);
         }
+
+        public override void OnRemoteAudioStateChanged(int p0, int p1, int p2, int p3)
+        {
+            base.OnRemoteAudioStateChanged(p0, p1, p2, p3);
+        }
+
         /// <summary>
         /// Ons the video size changed.
         /// </summary>
